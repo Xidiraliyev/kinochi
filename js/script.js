@@ -21,7 +21,7 @@ search_input.addEventListener("input", (e) => {
   let searchTerm = e.target.value.trim();
   if (searchTerm == "") {
     movie_list.innerHTML = "";
-    movie_inform.innerHTML = ''
+    movie_inform.innerHTML = ""
   } else {
     loadMovies(searchTerm);
   }
