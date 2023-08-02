@@ -1,0 +1,185 @@
+/* CUSTOM PROPERTIES
+:root {
+    --font-family: ;
+    --text-color: ;
+    --brand-color: ;
+    --white-color: ;
+}
+
+/* GLOBAL STYLES */
+ *,
+::after,
+::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+html {
+    height: 100%;
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    /* font-family: ;
+    color: ;
+    font-weight: ;
+    font-size: ;
+    line-height: ; */
+}
+
+main {
+    flex-grow: 1;
+}
+
+h1 {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    font-size: inherit;
+    display: inline-block;
+}
+
+ul,
+ol {
+    list-style-type: none;
+}
+
+img {
+    display: flex;
+}
+
+button {
+    outline: none;
+    border: none;
+}
+input:focus{
+    border: none;
+    outline: none;
+}
+.container {
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding-left: 1.5rem;
+    padding-right: 0.5rem;
+}
+
+
+.header{
+    background: blue;
+    padding-bottom: 50px;
+    margin-bottom: 20px;
+}
+
+.site-logo{
+    font-size: 50px;
+}
+
+.site-logo span{
+    color: rgb(255,215,0);
+}
+
+.search-block{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+}
+
+#search-input{
+    width: 500px;
+    height: 40px;
+    padding: 10px;
+    font-size: 15px;
+    border-radius: 6px;
+}
+
+.movie__year {
+    font-size: 16px;
+}
+.movie-list, .movies{
+    display: flex;
+    gap: 100px;
+    flex-wrap: wrap;
+    align-self: center;
+    justify-content: center;
+}
+
+.movie-list__item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.movie__img{
+    margin-bottom: 10px;
+    /* width: 200px;
+    height: 300px; */
+    
+}
+.movie__img img{
+    border-radius: 10px;
+    object-fit: cover;
+}
+.movie__title{
+    font-size: 22px;
+    margin-bottom: 8px;
+    text-align: center;
+    display: inline-block;
+}
+
+.movie__button{
+    padding: 8px;
+    font-size: 18px;
+    width: 80%;
+    background: blue;
+    border-radius: 5px;
+    color: aliceblue;
+}
+
+span {
+    color: rgb(122, 89, 49);
+}
+.movie-inform {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    font-size: 22px;
+}
+
+.movie-details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.movie-title{
+    font-size: 26px;
+    text-align: center;
+    color: rgb(255,215,0);
+    letter-spacing: 2px;
+}
+
+.movie-year {
+    font-size: 22px;
+}
+.movie-year span{
+    font-size: 18px;
+}
+.hidden {
+    display: none;
+}
+
+.show {
+    display: block;
+}
