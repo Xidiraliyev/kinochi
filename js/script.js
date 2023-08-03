@@ -3,10 +3,10 @@
 
 const search_input = document.querySelector("#search-input");
 const movie_list = document.querySelector(".movie-list");
-const movie_inform = document.querySelector('.movie-inform')
+const movie_inform = document.querySelector(".movie-inform");
 
 async function loadMovies(searchItem) {
-  const URL = `https://www.omdbapi.com/?s=${searchItem}&apikey=fc1fef96`;
+  const URL = `https://www.omdbapi.com/?s=${searchItem}&apikey=628c4a2b`;
   const res = await fetch(`${URL}`);
   const data = await res.json();
   // console.log(data)
@@ -21,13 +21,11 @@ search_input.addEventListener("input", (e) => {
   let searchTerm = e.target.value.trim();
   if (searchTerm == "") {
     movie_list.innerHTML = "";
-    movie_inform.innerHTML = ""
+    movie_inform.innerHTML = "";
   } else {
     loadMovies(searchTerm);
   }
 });
-
-
 
 // function findMovies(){
 //     let searchTerm = (search_input.value).trim()
@@ -68,7 +66,7 @@ function loadMovieDetails() {
       // console.log(movie.dataset.id)
       movie_list.innerHTML = "";
       const result = await fetch(
-        `https://www.omdbapi.com/?i=${movie.dataset.id}&apikey=fc1fef96`
+        `https://www.omdbapi.com/?i=${movie.dataset.id}&apikey=628c4a2b`
       );
       const movieDetails = await result.json();
       // console.log(movieDetails)
@@ -78,12 +76,16 @@ function loadMovieDetails() {
 }
 
 function displayMovieDetails(details) {
-  movie_inform.classList.remove('hidden')
+  movie_inform.classList.remove("hidden");
   // movie_list.classList.add('hidden')
-  movie_inform.classList.add('show')
+  movie_inform.classList.add("show");
   movie_inform.innerHTML = `
     <div class="movie-img">
-      <img src=${(details.Poster != "N/A") ? details.Poster : "./img/png/image_not_found.png"} alt="" width="200" height="300" />
+      <img src=${
+        details.Poster != "N/A"
+          ? details.Poster
+          : "./img/png/image_not_found.png"
+      } alt="" width="200" height="300" />
     </div>
     <div class="movie-details">
       <h2 class="movie-title">${details.Title}</h2>
@@ -99,5 +101,5 @@ function displayMovieDetails(details) {
 
       <p class="movie-language">Language: <span>${details.Language}</span></p>
     </div>
-  `
+  `;
 }
